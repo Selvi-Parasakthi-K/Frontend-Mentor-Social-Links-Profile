@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Inter-Normal';
+    src: url('./assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('./assets/fonts/static/Inter-Bold.ttf');
+}
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('./assets/fonts/static/Inter-Regular.ttf');
+}
+@font-face {
+    font-family: 'Inter-SemiBold';
+    src: url('./assets/fonts/static/Inter-SemiBold.ttf');
+}
+
+:root {
+    --Bg-color: hsl(0, 0%, 8%);
+    --Box-bg-color:hsl(0, 0%, 12%);
+    --Text-color:hsl(0, 0%, 100%);
+    --Font-color:hsl(75, 94%, 57%);
+    --Button-bg-color:hsl(0, 0%, 20%);
+}
+
+body{
+    background-color: var(--Bg-color);
+}
+
+main {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--Box-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    padding: 2rem 1rem;
+    margin:auto;
+    border-radius: 1rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+}
+
+.avatar-name {
+    font-family: 'Inter-SemiBold';
+    color: var(--Text-color);
+    font-weight: 500;
+    font-size: 1.3em;
+    margin-top: 1rem;
+}
+
+.place {
+    font-family: 'Inter-Bold';
+    color: var(--Font-color);
+    font-size: 0.7em;
+    margin-top: 0.6rem;
+}
+
+.detail {
+    font-family: 'Inter-Normal';
+    color: var(--Text-color);
+    font-size: 0.7em;
+    margin-top: 1.4rem;
+    font-weight: 300;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 0.7rem;
+    margin-top: 1.3rem;
+}
+
+.social-link {
+    background-color: var(--Button-bg-color);
+    padding: 0.7rem;
+    border-radius: 7px;
+    border: none;
+    font-size: 0.7em;
+    font-family: 'Inter-SemiBold';
+    color: var(--Text-color);
+    cursor: pointer;
+}
+
+.social-link:hover {
+    background-color: var(--Font-color);
+    color: var(--Bg-color);
+    transition: 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        height: 100dvh;
+    }
+    .container {
+        width: 70%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 769px) {
+    .container {
+        width: 40%;
+    }
+}
